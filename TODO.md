@@ -8,7 +8,7 @@ TO DO LIST:
         —Anything within a function is accessible to each other i.e. a function within a function can access the entire environment within the parent function. 
 
 
-•   Promises
+•       Promises
 •	.then and .catch syntax
 •	Fetch api
 •	High order array functions—forEach, Filter, Map
