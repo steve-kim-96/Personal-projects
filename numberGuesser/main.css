@@ -3,5 +3,7 @@ body {
 }
 
 #display {
-    display: flex;
+
+    margin: auto;
+    padding: 10px;
 }
