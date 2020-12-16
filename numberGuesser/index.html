@@ -1,18 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="main.css">
 </head>
+
 <body>
-    <h1>Can you guess the correct number?</h1>
+    <h1 id="winner-winner">Can you guess the correct number?</h1>
     <div id="display">
-        <p>Target Number</p>
-        <p>Computer Guess</p>
-        <p>Human Guess</p>
+        <div id="target">
+            <p>Target Number</p>
+            <p>0</p>
+        </div>
+        <div id="computer">
+            <p>Computer Guess</p>
+            <p>0</p>
+        </div>
+
+            <form id="player-submit">
+                <label for="number">Your Guess</label><br>
+                <input type="number" id="player-answer" name="number" value="0">
+                <input type="button" id="submit" value="Submit">
+            </form>
+        </div>
     </div>
+    <!--How do I create a form that takes in the users guess, compares it with the computer guess and then announces the winenr?-->
+    <!--Do I do an onclick function and do the comparison inside onclick function?-->
     <script src="numberGuesser.js"></script>
 </body>
+
 </html>
+
