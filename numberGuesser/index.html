@@ -20,12 +20,11 @@
             <p>0</p>
         </div>
 
-            <form id="player-submit">
-                <label for="number">Your Guess</label><br>
-                <input type="number" id="player-answer" name="number" value="0">
-                <input type="button" id="submit" value="Submit">
-            </form>
+        <div id="player-submit">
+            <input type="number" id="player-answer" min="0" max="9" value="0">
         </div>
+        <button id="guess-button">Make your guess!</button>
+    </div>
     </div>
     <!--How do I create a form that takes in the users guess, compares it with the computer guess and then announces the winenr?-->
     <!--Do I do an onclick function and do the comparison inside onclick function?-->
@@ -33,4 +32,3 @@
 </body>
 
 </html>
-

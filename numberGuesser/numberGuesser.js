@@ -9,29 +9,43 @@
 let targetNumber = document.getElementById('target');
 let computerNumber = document.getElementById('computer');
 let humanNumber = document.getElementById('human');
-let submitButton = document.getElementById('submit');
-let playerAnswer = document.getElementById('player-answer');
-let winner = document.getElementById('winner-winner')
-const targetGenerator = () => {
-    return Math.floor(Math.random() * 10);
-};
+let submitButton = document.getElementById('guess-button');
+let playerAnswer = document.getElementById('player-answer').value;
 
-const computerGuess = () => {
-    return Math.floor(Math.random() * 10);
-};
+let winner = document.getElementById('winner-winner');
 
-const computer = computerGuess();
-const target = targetGenerator();
-
-const winnerAssign = () => {
-
-console.log(computer - target);
-console.log(playerAnswer);
-};
-
-submitButton.onclick = () => {
+submitButton.addEventListener('click', () => {
+    
+    const targetGenerator = () => {
+        return Math.floor(Math.random() * 10);
+    };
+    
+    const computerGuess = () => {
+        return Math.floor(Math.random() * 10);
+    };
+    
+    const computer = computerGuess();
+    const target = targetGenerator();
+    let computerDiff = Math.abs(computer - target);
+    let playerDiff = Math.abs(playerAnswer - target);
+    
+    const winnerAssign = () => {
+        if (playerDiff <= computerDiff){
+            winner.innerHTML = "You Win!";
+        } else {
+            winner.innerHTML = "You lose!";
+        }
+    };
     targetNumber.innerHTML = `target number is ${target}`;
     computerNumber.innerHTML = `computer chose ${computer}`;
     winnerAssign();
-}
+})
+
+
+
+/*submitButton.onclick = () => {
+    targetNumber.innerHTML = `target number is ${target}`;
+    computerNumber.innerHTML = `computer chose ${computer}`;
+    winnerAssign();
+}*/
 
